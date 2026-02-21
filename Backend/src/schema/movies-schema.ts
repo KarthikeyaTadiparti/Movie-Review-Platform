@@ -10,7 +10,7 @@ import {
 
 export const movies = pgTable("movies", {
     id: serial("id").primaryKey(),
-    title: varchar("title", { length: 255 }).notNull(),
+    title: varchar("title", { length: 255 }).notNull().unique(),
     genre: varchar("genre", { length: 100 }).notNull(),
     releaseYear: integer("release_year").notNull(),
     director: varchar("director", { length: 255 }).notNull(),

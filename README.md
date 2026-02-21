@@ -51,7 +51,7 @@ A premium, full-stack movie platform where users can browse films, share reviews
 ### **Prerequisites**
 *   Node.js (v18+)
 *   PostgreSQL Database (Local or Cloud like Neon/ElephantSQL)
-*   Bun or NPM/NPX
+*   NPM (v10+) or Yarn
 
 ### **1. Clone the repository**
 ```bash
@@ -62,7 +62,7 @@ cd movie-critic-platform
 ### **2. Setup Backend**
 ```bash
 cd Backend
-bun install
+npm install
 ```
 Create a `.env` file in the `Backend` directory:
 ```env
@@ -73,15 +73,15 @@ FRONTEND_URL=http://localhost:5173
 ```
 Run migrations and start the server:
 ```bash
-bun run db:push  # Push schema to DB
-bun run dev      # Start dev server
+npm run db:push  # Push schema to DB
+npm run dev      # Start dev server
 ```
 
 ### **3. Setup Frontend**
 ```bash
 cd ../Frontend
-bun install
-bun run dev
+npm install
+npm run dev
 ```
 Open [http://localhost:5173](http://localhost:5173) in your browser.
 

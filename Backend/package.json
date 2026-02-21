@@ -1,40 +1,49 @@
 {
     "name": "backend",
-    "module": "index.ts",
     "type": "module",
     "private": true,
     "scripts": {
-        "dev": "bun --watch src/index.ts",
-        
+        "dev": "tsx watch src/index.ts",
+        "start": "node dist/index.js",
+        "build": "tsc",
         "db:generate": "drizzle-kit generate",
         "db:push": "drizzle-kit push",
         "db:migrate": "drizzle-kit migrate",
-        "db:studio": "drizzle-kit studio"
+        "db:studio": "drizzle-kit studio",
+        "db:seed": "tsx src/scripts/seed.ts"
     },
     "devDependencies": {
         "@types/bcrypt": "^6.0.0",
-        "@types/bun": "latest",
         "@types/cookie-parser": "^1.4.10",
         "@types/cors": "^2.8.19",
         "@types/express": "^5.0.6",
         "@types/jsonwebtoken": "^9.0.10",
-        "@types/node": "^25.0.10",
+        "@types/multer": "^2.0.0",
+        "@types/node": "^25.3.0",
         "@types/pg": "^8.16.0",
-        "drizzle-kit": "^0.31.9"
+        "drizzle-kit": "^0.31.9",
+        "tsx": "^4.21.0",
+        "typescript": "^5.9.3"
     },
     "peerDependencies": {
         "typescript": "^5.9.3"
     },
     "dependencies": {
-        "@types/multer": "^2.0.0",
         "bcrypt": "^6.0.0",
         "cookie-parser": "^1.4.7",
         "cors": "^2.8.6",
+        "dotenv": "^17.3.1",
         "drizzle-orm": "^0.45.1",
         "express": "^5.2.1",
         "jsonwebtoken": "^9.0.3",
         "multer": "^2.0.2",
         "pg": "^8.18.0",
         "zod": "^4.3.6"
-    }
+    },
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
 }
