@@ -5,7 +5,11 @@
     "private": true,
     "scripts": {
         "dev": "bun --watch src/index.ts",
-        "studio": "drizzle-kit studio"
+        
+        "db:generate": "drizzle-kit generate",
+        "db:push": "drizzle-kit push",
+        "db:migrate": "drizzle-kit migrate",
+        "db:studio": "drizzle-kit studio"
     },
     "devDependencies": {
         "@types/bcrypt": "^6.0.0",
